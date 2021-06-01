@@ -1,22 +1,22 @@
 <?php
-	include_once('connection.php');
-	//ao extrair o post temas as variaveis email e senha
-	extract($_POST);
-	$email = $_POST['email'];
-	$senha = $_POST['senha'];
-	$busca = mysqli_query($con, "SELECT * from `usuario` where `email` = '$email' and `senha` = '$senha'");
-	$cliente = mysqli_fetch_array($busca);
+include_once('connection.php');
+//ao extrair o post temas as variaveis email e senha
+extract($_POST);
+$email = $_POST['email'];
+$senha = $_POST['senha'];
+$busca = mysqli_query($conn, "SELECT * from `usuario` where `email` = '$email' and `senha` = '$senha'");
+$cliente = mysqli_fetch_array($busca);
 
-	if($email=='adm@gmail.com'){
-		header('location:adm.php');
-	} else if(($email == $cliente['email'])&&($senha == $cliente['senha'])){
-			header('location:index.php');
-		}else {
-			echo "<script language='javascript'>
+if ($email == 'adm@gmail.com') {
+	header('location:adm.php');
+} else if (($email == $cliente['email']) && ($senha == $cliente['senha'])) {
+	header('location:index.php');
+} else {
+	echo "<script language='javascript'>
 			alert('Login ou senha inválidos');
 			window.location.href = 'error.html'
 			</script>";
-		}
+}
 ?>
 
 <?php
@@ -33,7 +33,7 @@ include_once("connection.php");
 
 $user = "SELECT * FROM `usuario` WHERE `email` = '$email' AND `senha` = '$pass'";
 
-$resultUsers = mysqli_query($con, $user);
+$resultUsers = mysqli_query($conn, $user);
 
 if(mysqli_num_rows($resultUsers) < 0) {
 	echo "Erro ao acessar o banco de dados!";

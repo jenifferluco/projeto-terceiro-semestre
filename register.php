@@ -32,13 +32,10 @@ if(isset($_POST['tele']) && !empty($_POST['tele'])){
 }
 
 
- mysqli_query($con, "INSERT INTO `usuario`(`nome`,`email`, `senha`, `cpf`, `dataNascimento`, `endereco`,`telefone`) VALUES ('$name','$email','$pass','$cpf','$data','$endereco','$telefone');");
+ mysqli_query($conn, "INSERT INTO `usuario`(`nome`,`email`, `senha`, `cpf`, `dataNascimento`, `endereco`,`telefone`) VALUES ('$name','$email','$pass','$cpf','$data','$endereco','$telefone');");
  echo "<script language='javascript'>
                         alert('Cadastro efetuado com sucesso!');
                         window.location.href = 'adm.php'
                         </script>";
 
 header('Location: index.php');
-
-?>
-
