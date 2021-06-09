@@ -1,5 +1,10 @@
 # projeto-terceiro-semestre
  Projeto faculdade.
+# apresentação do Projeto
+
+[Rocket Technology (1).pptx](https://github.com/jenifferluco/projeto-terceiro-semestre/files/6627311/Rocket.Technology.1.pptx)
+
+#trabalho em PDF
  
 [Atualizado 07-06.pdf](https://github.com/jenifferluco/projeto-terceiro-semestre/files/6612659/Atualizado.07-06.pdf)
 
